@@ -21,16 +21,23 @@ void confirm() {
 
 void askPassword() {
     cout << "what's your Password ";
-    getline(cin, password);
-    confirm();
-    if (answer == "yes") {
-        cout << "your account has been succesfully setup, welcome: " << name<< endl;
-    } else if (answer == "no") {
-        askPassword();
-    } else {
+    cin >> password;
+    if (password.find("password") != string::npos ||
+    password.find("Password") != string::npos ||
+    password.find(name) != string::npos ||
+    password.find(surname) != string::npos ||
+    password.find(getlogin()) != string::npos||
+    password.find("Pass") != string::npos||
+    password.find("pass") != string::npos||
+    password.find("123") != string::npos||
+    password.find("456") != string::npos||
+    password.find("789") != string::npos){
+        cout << "this password is not secure, plese choose another one"<<endl;
         askPassword();
     }
-}
+    else {
+        cout << "your account has been succesfully setup, welcome: " << name<< endl;
+}}
 
 void askSurname() {
     cout << "what's your surname? ";
