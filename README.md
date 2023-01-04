@@ -23,10 +23,11 @@
   <li><code>ctime</code>: for the time module</li>
   <li><code>unistd.h</code>: for the username</li>
 </ul>
-<h2>Contact</h2>
+<h2>Contacts</h2>
 <ul>
-  <li>GitHub: https://github.com/williamaerus/</li>
-  <li>Instagram: Francesco.serangeli</li>
+  <li>GitHub: https://github.com/williamaerus/ (Creator)</li>
+  <li>Instagram: https://instagram.com/Francesco.serangeli (Creator)</li>
+  <li>GitHub: https://github.com/ilPax (collaborator)</li>
 </ul>
 <h2>Notes</h2>
 <ul>
