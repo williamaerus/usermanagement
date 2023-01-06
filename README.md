@@ -5,6 +5,8 @@
 <h2>Usage</h2>
 
 <p>To use this program, compile and run the <code>main</code> function. The program will prompt the user for their name, surname, and password, and will confirm the input with the user. The program will then create the two text files mentioned above.</p>
+![image](photo1)
+[photo1]: https://imgur.com/a/DIKEDoS "how the code works"
 
 <h2>File Descriptions</h2>
 
@@ -13,6 +15,9 @@
   <li><code>Public Profile.txt</code>: A text file containing the user's first login time and date, username, name, and surname, intended to be seen by the user.</li>
   <li><code>SoftwareProfile.txt</code>: A text file containing the same information as <code>Public Profile.txt</code>, but in a format that is easier for the software to read.</li>
 </ul>
+![image](photo2)
+[photo2]: https://imgur.com/a/XTQs0em "publicProfile.txt"
+
 
 <h2>Dependencies</h2>
 <p>This program depends on the following libraries:</p>
