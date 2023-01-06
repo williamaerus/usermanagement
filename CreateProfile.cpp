@@ -3,11 +3,24 @@
 #include <chrono> // for the time module
 #include <ctime> // for the time module
 #include <unistd.h> // for the username
+
 using namespace std;
 
-//variables 
-string firstTime, name, surname, password, answer;
 
+//variables 
+string firstTime, name, surname, password, answer,OS,username;
+void Find_Username(){
+    #if defined(__linux__)
+        int getlogin_r(char *buf, size_t bufsize);
+        username = getlogin();
+    #elif defined(_WIN32)
+        char * user = getenv("username");
+        username = string(user);
+
+    #else
+        cout << "this operating system is not supported by this software" << endl;
+    #endif
+}
 void confirm() {
     cout << "are you sure? Y/n: ";
     string response;
@@ -26,14 +39,10 @@ void askPassword() {
     password.find("Password") != string::npos ||
     password.find(name) != string::npos ||
     password.find(surname) != string::npos ||
-    password.find(getlogin()) != string::npos||
-    password.find("Pass") != string::npos||
-    password.find("pass") != string::npos||
-    password.find("123") != string::npos||
-    password.find("456") != string::npos||
-    password.find("789") != string::npos){
+    password.find(getlogin()) != string::npos){
         cout << "this password is not secure, plese choose another one"<<endl;
         askPassword();
+        
     }
     else {
         cout << "your account has been succesfully setup, welcome: " << name<< endl;
@@ -80,7 +89,6 @@ void create_profile() {
 
     ofstream PUBProfile("Public Profile.txt");
     ofstream SoftwareProfile("SoftwareProfile.txt");
-    int getlogin_r(char *buf, size_t bufsize);
     get_time();
 
     // save everything on files
@@ -90,8 +98,8 @@ void create_profile() {
 
 PUBProfile << "first login time and date: " << firstTime << endl;
 SoftwareProfile << firstTime << endl;
-PUBProfile << "username: " << getlogin() << endl;
-SoftwareProfile << getlogin() << endl;
+PUBProfile << "username: " << username<< endl;
+SoftwareProfile << username << endl;
 
 // get user input
 
@@ -110,6 +118,7 @@ SoftwareProfile << password << endl;
 
 int main() {
     create_profile();
+    Find_Username();
     return 0;
 }
 
