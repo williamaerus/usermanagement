@@ -117,8 +117,8 @@ SoftwareProfile << password << endl;
 }
 
 int main() {
-    create_profile();
     Find_Username();
+    create_profile();
     return 0;
 }
 
