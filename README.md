@@ -1,38 +1,68 @@
-<h1>User Profile Creation</h1>
+<h1>CreateProfile</h1>
 
-<p>This program creates a user profile and asks the user for their name, surname, and password. The program will then confirm the input with the user and create two text files, "Public Profile.txt" and "SoftwareProfile.txt", containing the user's first login time and date, username, name, and surname.</p>
+<p>This script was created by Francesco Serangeli and is a program that helps a user set up a new account on the system. The program is written in C++ and currently only works on Linux systems.</p>
 
-<h2>Usage</h2>
+<h2>Running the Script</h2>
 
-<p>To use this program, compile and run the <code>main</code> function. The program will prompt the user for their name, surname, and password, and will confirm the input with the user. The program will then create the two text files mentioned above.</p>
-<a href="https://imgur.com/cYOADew"><img src="https://i.imgur.com/cYOADew.png" title="source: imgur.com" /></a>
+<p>To run the script, you need to have a C++ compiler installed on your system. To compile the script, use the following command:</p>
+
+<pre>
+g++ CreateProfile.cpp -o CreateFile
+</pre>
+
+<p>This will create an executable file called "CreateProfile". To run the script, type the following command:</p>
+
+<pre>
+./CreateProfile
+</pre>
 
 
-<h2>File Descriptions</h2>
+
+<h2>Features</h2>
+
+<p>This script has the following features:</p>
 
 <ul>
-  <li><code>main.cpp</code>: Contains the <code>main</code> function and the function calls to create the user profile and get user input.</li>
-  <li><code>Public Profile.txt</code>: A text file containing the user's first login time and date, username, name, and surname, intended to be seen by the user.</li>
-  <li><code>SoftwareProfile.txt</code>: A text file containing the same information as <code>Public Profile.txt</code>, but in a format that is easier for the software to read.</li>
+  <li>Asks the user for their name, surname, and password</li>
+  <li>Checks if the password is secure enough</li>
+  <li>Saves the user's name, surname, password, and login time and date to a profile file</li>
 </ul>
-<a href="https://imgur.com/a/EyGPeZL"><img src="https://i.imgur.com/fDOWVEJ.png" title"source: imgur.com" /></a>
-<h2>Dependencies</h2>
-<p>This program depends on the following libraries:</p>
+
+<h1 style="text-align: center;">ReadProfile</h1>
+
+<p>This script is Made to read the files created by the previous one.</p>
+
+<h2 style="text-align: center;">Running the Script</h2>
+
+<p>To run the script, you need to have a C++ compiler installed on your system. To compile the script, use the following command:</p>
+
+<pre style="text-align: center;">
+g++ ReadProfile.cpp -o ReadProfile
+</pre>
+
+<p>This will create an executable file called "script2". To run the script, type the following command:</p>
+
+<pre style="text-align: center;">
+./ReadProfile
+</pre>
+
+<h2>Collaborators</h2>
+
+<p>The following people have contributed to the development of this project:</p>
+
 <ul>
-  <li><code>iostream</code>: for input and output</li>
-  <li><code>fstream</code>: for file management</li>
-  <li><code>chrono</code>: for the time module</li>
-  <li><code>ctime</code>: for the time module</li>
-  <li><code>unistd.h</code>: for the username</li>
+  <li>Francesco Serangeli: 
+    <ul>
+      <li>GitHub: <a href="https://github.com/williamaerus/">https://github.com/williamaerus/</a></li>
+      <li>Instagram: <a href="https://instagram.com/Francesco.serangeli">https://instagram.com/Francesco.serangeli</a></li>
+    </ul>
+  </li>
+  <li>ilPax:
+    <ul>
+      <li>GitHub: <a href="https://github.com/ilPax">https://github.com/ilPax</a></li>
+    </ul>
+  </li>
 </ul>
-<h2>Contacts</h2>
-<ul>
-  <li>GitHub: https://github.com/williamaerus/ (Creator)</li>
-  <li>Instagram: https://instagram.com/Francesco.serangeli (Creator)</li>
-  <li>GitHub: https://github.com/ilPax (collaborator)</li>
-</ul>
-<h2>Notes</h2>
-<ul>
-  <li>The program will keep asking the user for their name, surname, or password if the user does not confirm their input.</li>
-  <li>The program will ask the user to confirm their input by typing "y" or "n". Other input will be treated as invalid.</li>
-</ul>
+<h2>Contact</h2>
+
+<p>If you have any questions or issues with this script, please contact Francesco Serangeli via GitHub or Instagram.</p>
